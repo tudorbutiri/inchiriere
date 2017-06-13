@@ -90,12 +90,12 @@
                                         <button id="Button Submit" name="Button Submit" class="btn btn-success">Submit</button>
                                     </div>
 
-                                        <div class="form-group">
-                                            <label class="col-md-4 control-label" for="Button Submit"></label>
-                                            <div class="col-md-4">
-                                                <button id="Button Submit" name="Button Submit" class="btn btn-success">Submit</button>
-                                            </div>
-                                        </div>
+                                    <div class="form-group">
+                                    <label class="col-md-4 control-label" for="Button Submit"></label>
+                                    <div class="col-md-4">
+                                        <button id="Button Submit" name="Button Submit" class="btn btn-success">Submit</button>
+                                    </div>
+                                    </div>
                                 </div>
 
                                 </fieldset>

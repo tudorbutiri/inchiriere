@@ -14,10 +14,10 @@
     <mvc:resources mapping="/resources/**" location="/resources/" ></mvc:resources>
 
      <!--Get the messages -->
-    <!--<beans:bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">-->
-        <!--<beans:property name="basename" value="classpath:messages"/>-->
-        <!--<beans:property name="defaultEncoding" value="UTF-8" />-->
-    <!--</beans:bean>-->
+    <beans:bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+        <beans:property name="basename" value="messages"/>
+        <beans:property name="defaultEncoding" value="UTF-8" />
+    </beans:bean>
 
     <!-- Map simple view name such as "test" into /WEB-INF/test.jsp -->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">

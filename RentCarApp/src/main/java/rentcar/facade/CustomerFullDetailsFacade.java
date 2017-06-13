@@ -12,7 +12,7 @@ import rentcar.services.AddCustomerAddressDataService;
 import rentcar.utils.CustomerFullDetailsConverter;
 
 @Service
-public class AddCustomerFullDetailsFacade {
+public class CustomerFullDetailsFacade {
 
     @Autowired
     CustomerFullDetailsConverter customerFullDetailsConverter;
@@ -34,6 +34,4 @@ public class AddCustomerFullDetailsFacade {
         CustomerAddressData customerAddressData = customerFullDetailsConverter.convertCustomerAddressDataDTOtoData(customerAddressDataDTO);
         addCustomerAddressDataService.addCustomerAddressData(customerAddressData, customerDataDTO.getEmail());
     }
-
-    public void getCustomerData()
 }

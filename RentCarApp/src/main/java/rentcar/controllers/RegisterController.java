@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 import rentcar.dto.CustomerAddressDataDTO;
 import rentcar.dto.CustomerDataDTO;
-import rentcar.facade.AddCustomerFullDetailsFacade;
+import rentcar.facade.CustomerFullDetailsFacade;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -22,7 +22,7 @@ public class RegisterController{
     private static final Logger logger = LoggerFactory.getLogger(RegisterController.class);
 
     @Autowired
-    AddCustomerFullDetailsFacade addCustomerFullDetailsFacade;
+    CustomerFullDetailsFacade customerFullDetailsFacade;
 
     @RequestMapping(value="/register" , method = RequestMethod.GET)
     public ModelAndView getRegister()
@@ -38,7 +38,7 @@ public class RegisterController{
     @RequestMapping(value="/register" , method = RequestMethod.POST)
     public void postRegister(@ModelAttribute("customerData") CustomerDataDTO customerDataDTO, CustomerAddressDataDTO customerAddressDataDTO)
     {
-        addCustomerFullDetailsFacade.addCustomerData(customerDataDTO);
-        addCustomerFullDetailsFacade.addCustomerAddressData(customerAddressDataDTO, customerDataDTO);
+        customerFullDetailsFacade.addCustomerData(customerDataDTO);
+        customerFullDetailsFacade.addCustomerAddressData(customerAddressDataDTO, customerDataDTO);
     }
 }
